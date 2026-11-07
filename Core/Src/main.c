@@ -27,6 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stm32l476g_discovery_glass_lcd.h"
 
 /* USER CODE END Includes */
 
@@ -95,7 +96,17 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-
+  BSP_LCD_GLASS_Clear();
+  BSP_LCD_GLASS_DisplayBar(LCD_BAR_0);
+  HAL_Delay(1000);
+  BSP_LCD_GLASS_DisplayBar(LCD_BAR_1);
+  HAL_Delay(1000);
+  BSP_LCD_GLASS_DisplayBar(LCD_BAR_2);
+  HAL_Delay(1000);
+  BSP_LCD_GLASS_DisplayBar(LCD_BAR_3);
+  HAL_Delay(1000);
+  BSP_LCD_GLASS_Clear();
+  HAL_Delay(3000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
